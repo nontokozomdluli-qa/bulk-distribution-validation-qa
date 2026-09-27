@@ -10,8 +10,17 @@
 
 These checks work together as a reusable validation set. Each check can be switched on or off in the script, and the results are exported automatically for reporting.
 
+## Discrepancy Findings: 
+  - Check 1: Source Record Count vs Distribution Record Count - Found 1
+  - Check 2: Missing Records - Found 2
+  - Check 3: Duplicate Records - Found 1
+  - Check 4: Calculation Validation - Found 1
+  - Check 5: Negative Source Amounts - Found 1
+  - Check 6: Zero Distribution Amounts - Found 1
+  - Check 7: Discrepancies between distributed and expected net amount - Found 2
+
 ## How to scale it up for real production runs
-1. Move the validations into the actual data warehouse and use tools like Snowflake for larger data volumes.
+1. Move the validations into the actual data warehouse and use tools like Snowflake for larger data volumes. Stream CSV parsing (using pandas chunking or database cursors) to scale the python script. 
 2. Add configurable discrepancy thresholds to account for rounding, pricing, or market movement where appropriate.
 3. Add pre-validations for active and inactive clients to reduce unnecessary processing.
 4. Keep automated reporting in Excel for stakeholder review and auditability.
