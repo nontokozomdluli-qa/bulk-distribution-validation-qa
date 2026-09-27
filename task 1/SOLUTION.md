@@ -40,4 +40,3 @@ These checks work together as a reusable validation set. Each check can be switc
 - Exception handling: document what should happen when the source data is incomplete or late.
 - Retention: keep a history of generated reports for audit and trend review.
 - Reconciliation traceability: include run date, input file versions, and report versioning.
-

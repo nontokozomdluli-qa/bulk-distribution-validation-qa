@@ -20,7 +20,7 @@ During the distribution run for period 2026-06 BatchDistributionJob failed due t
 ## Business Impact 
 ** Financial impact: for client C0453 since they did not receive their fund
 ** Reputational Risk: and Operations overheard: Clients not receiving their money is a big deal for the business and in the age of social media it's easy for a disgruntled client to bring negative attention. Missed payments lead to addiditional work for operations team, calculation delays negatively impact SLAs and other business processed running at the same time. 
-** Silent Failure:Final log says "INFO  BatchDistributionJob - Batch complete. 1 record failed, 4,811 succeeded." does not make this seems like a big issue which then cause alerting systems in place to not pick this failure up. 
+** Silent Failure: Final log says "INFO  BatchDistributionJob - Batch complete. 1 record failed, 4,811 succeeded." does not make this seems like a big issue which then cause alerting systems in place to not pick this failure up. 
 
 ## Proposed Resolution 
 ** Enforce data schema contraints where null values are not accepted in the fee_pct or null values get defaulted to 0.00 in the table. 
