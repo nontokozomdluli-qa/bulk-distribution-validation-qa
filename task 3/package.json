@@ -1,0 +1,17 @@
+{
+    "name": "task-3-distribution-playwright-tests",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Playwright validations for Distributions and Transactions",
+    "scripts": {
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "test:period": "node -e \"const { spawnSync } = require('child_process'); const period = process.argv[1] || ''; const spec = process.argv[2] || ''; if (!period) { console.error('Usage: npm run test:period -- YYYY-MM [tests/file.spec.js]'); process.exit(1); } const env = { ...process.env, TEST_PERIOD: period }; const args = ['playwright', 'test']; if (spec) args.push(spec); const result = spawnSync('npx', args, { stdio: 'inherit', shell: true, env }); process.exit(result.status ?? 1);\""
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.57.0"
+    },
+    "dependencies": {
+        "sqlite3": "^5.1.7"
+    }
+}
