@@ -130,3 +130,7 @@ Structure and required assets are present:
 
 ## Closing note
 AI significantly improved speed and structure, but correctness came from iterative verification, domain judgment, and explicit acceptance checks.
+
+===
+## Prompt to validate overall solution 
+** I have done the assessment and have the different folder to for each task, task 1, task 2 and task 3 as per the instructions. All the required resources are in folder resources. Check my project structure and let me know if I missed anything. I also need to do a write up of how I used AI to finish the project. At the root of the project as a SOLUTION.md file detailing how I strategically used AI to finish project. You can use prompts/chats that are in this project
